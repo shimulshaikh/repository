@@ -26,14 +26,14 @@
       <tbody>
         @foreach($students as $student)
         <tr>
-          <th scope="row">{{ $student->id }}</th>
-          <td>{{ $student->name }}</td>
-          <td>{{ $student->email }}</td>
-          <td>{{ $student->class }}</td>
+          <th scope="row">{{ $student['id'] }}</th>
+          <td>{{ $student['name'] }}</td>
+          <td>{{ $student['email'] }}</td>
+          <td>{{ $student['class'] }}</td>
           <td>
-            <a class="btn btn-primary btn-sm" href="{{ route('students.edit', $student->id) }}" role="button">Edit</a>
+            <a class="btn btn-primary btn-sm" href="{{ route('students.edit', $student['id']) }}" role="button">Edit</a>
             &nbsp;
-            <a class="btn btn-danger btn-sm" onclick="return confirm('Are You sure want to delete !')" href="{{route('student.destroy', $student->id)}}">Delete</a>
+            <a class="btn btn-danger btn-sm" onclick="return confirm('Are You sure want to delete !')" href="{{route('student.destroy', $student['id'])}}">Delete</a>
           </td>
         </tr>
         @endforeach

@@ -12,14 +12,10 @@ class studentRepository implements studentInterface
     /**
      * summary
      */
-    public function __construct()
-    {
-        
-    }
 
 	public function all()
 	{
-		return Student::get();
+		return Student::get()->toArray();
 	}
 
 	public function get($id)

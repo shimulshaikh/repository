@@ -24,7 +24,6 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        //$students = Student::get();
         $students = $this->student->all();
         return view('student.index')->with(compact('students'));
     }
